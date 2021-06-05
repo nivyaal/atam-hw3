@@ -15,7 +15,8 @@ hook:
   call _start
 	mov $1, %rdi		  #stdout
 	mov $msg , %rsi		  
-	mov $41, %rdx		# msg width
+	mov $endmsg, %rdx		# msg width
+	sub %rsi,%rdx
 	mov $1, %rax
 	syscall
   
